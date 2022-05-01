@@ -1,0 +1,16 @@
+.row{
+    background-color: rgb(133, 133, 133);
+}
+footer{
+    color: #fefefe;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px -2px 5px rgb(107, 107, 107);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+p{
+    margin: 0px;
+}
