@@ -7,9 +7,11 @@ import { PersonaService } from 'src/app/service/persona.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
-  persona: persona =  new persona("","","", "", "")
 
+
+export class AboutComponent implements OnInit {
+  persona: persona =  new persona("","","", "", "")  
+  
   constructor(public personaService:PersonaService) { }
 
   ngOnInit(): void {
