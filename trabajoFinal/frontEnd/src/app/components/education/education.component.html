@@ -1,0 +1,35 @@
+<!-- <div class="row" *ngFor="let education of educations">
+    <div class="row">
+    <div class="col-3">
+       <img src="{{education.imagenEdu}}" alt=""> 
+    </div>
+    <div class="col-6">
+        {{education.tituloEdu}}
+    </div>
+    <div class="col-9">
+        {{education.fechaEdu}}
+    </div>
+    <div class="col-12">
+        {{education.descripcionEdu}}        
+    </div>
+</div> -->
+
+
+<div class="education">
+    <h2 class="education-title">Educación</h2>
+    <ul>
+        <div class="row col-lg-11 offset-lg-1" *ngFor="let education of educations">
+
+
+            <li>
+                <img class="educacion-logo" src={{education.imagenEdu}} alt="">
+                <h2>{{education.descripcionEdu}}</h2>
+                <p>{{education.tituloEdu}}</p>
+                <p>{{education.fechaEdu}}</p>
+                <hr>
+            </li>
+
+
+        </div>
+    </ul>
+</div>

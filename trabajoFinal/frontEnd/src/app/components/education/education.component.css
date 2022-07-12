@@ -9,3 +9,9 @@ div{
 h2, h3{
     display: inline;
 }
+.education-title{
+    padding-left: 20px;
+}
+.educacion-logo{
+    width: 50px;
+}

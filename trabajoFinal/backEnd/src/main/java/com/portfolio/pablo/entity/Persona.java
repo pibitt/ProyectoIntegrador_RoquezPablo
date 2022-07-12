@@ -47,10 +47,7 @@ public class Persona {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
     private List<Experiencia> experienciaList;
 
-   
-    }
-
-    //no pongo el constructor ni los getters y setters porque la pagina no me levanta los datos :(
-    
-
 }
+
+//no pongo el constructor ni los getters y setters porque la pagina no me levanta los datos :(
+
