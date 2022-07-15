@@ -20,6 +20,11 @@ export class ExperienceService {
   public addExperience (experience: Experience):Observable<Experience>{
     return this.http.post<Experience>(`${this.apiServerUrl}/experiencia/add`, experience);
   }
-  //faltan cosas para completar. Video 2da parte, minuto 45.
-
+  public updateExperience(experience: Experience):Observable<Experience>{
+    return this.http.put<Experience>(`${this.apiServerUrl}/experiencia/update`, experience)
+  }
+  public deleteExperience(id: number):Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${id}` );
+  }
+  
 }

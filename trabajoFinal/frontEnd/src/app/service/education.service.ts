@@ -16,9 +16,13 @@ export class EducationService {
   public getEducation(): Observable<Education[]> {
     return this.http.get<Education[]>(`${this.apiServerUrl}/educacion/all`);
   }
-  public addEducation(educacion: Education):Observable<Education>{
-    return this.http.post<Education>(`${this.apiServerUrl}/educacion/add`, educacion);
+  public addEducation(education: Education):Observable<Education>{
+    return this.http.post<Education>(`${this.apiServerUrl}/educacion/add`, education);
   }
-  //faltan cosas para completar. Video 2da parte, minuto 45.
-
+  public updateEducation(education: Education):Observable<Education>{
+    return this.http.put<Education>(`${this.apiServerUrl}/educacion/update`, education)
+  }
+  public deleteEducation(id: number):Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/educacion/delete/${id}` );
+  }
 }
