@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Education } from 'src/app/model/education';
 import { EducationService } from 'src/app/service/education.service';
 
+
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
@@ -17,8 +18,12 @@ export class EducationComponent implements OnInit {
 
   constructor(private educationService: EducationService) { }
 
+  
+
   ngOnInit(): void {
     this.getEducations();
+    
+    
   }
 
   public getEducations(): void {
