@@ -1,28 +1,30 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
-import { Education } from "../model/education";
+//no sirve, reemplazado por S-educacion
 
-@Injectable({
-  providedIn: 'root'
-})
-export class EducationService {
+// import { HttpClient } from "@angular/common/http";
+// import { Injectable } from "@angular/core";
+// import { Observable } from "rxjs";
+// import { environment } from "src/environments/environment";
+// import { Education } from "../model/education";
 
-  private apiServerUrl = 'http://localhost:8080';
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class EducationService {
 
-  constructor(private http: HttpClient) { }
+//   private apiServerUrl = 'http://localhost:8080';
 
-  public getEducation(): Observable<Education[]> {
-    return this.http.get<Education[]>(`${this.apiServerUrl}/educacion/all`);
-  }
-  public addEducation(education: Education):Observable<Education>{
-    return this.http.post<Education>(`${this.apiServerUrl}/educacion/add`, education);
-  }
-  public updateEducation(education: Education):Observable<Education>{
-    return this.http.put<Education>(`${this.apiServerUrl}/educacion/update`, education)
-  }
-  public deleteEducation(id: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/educacion/delete/${id}` );
-  }
-}
+//   constructor(private http: HttpClient) { }
+
+//   public getEducation(): Observable<Education[]> {
+//     return this.http.get<Education[]>(`${this.apiServerUrl}/educacion/all`);
+//   }
+//   public addEducation(education: Education):Observable<Education>{
+//     return this.http.post<Education>(`${this.apiServerUrl}/educacion/add`, education);
+//   }
+//   public updateEducation(education: Education):Observable<Education>{
+//     return this.http.put<Education>(`${this.apiServerUrl}/educacion/update`, education)
+//   }
+//   public deleteEducation(id: number):Observable<void>{
+//     return this.http.delete<void>(`${this.apiServerUrl}/educacion/delete/${id}` );
+//   }
+// }

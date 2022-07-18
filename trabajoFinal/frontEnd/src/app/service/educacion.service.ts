@@ -1,4 +1,6 @@
-//ANULADO POR EDUCATION.SERVICE.TS DE ANDRES CAMACHO
+//no sirve, reemplazado por S-educacion
+
+
 
 //MGB:
 // import { HttpClient } from '@angular/common/http';

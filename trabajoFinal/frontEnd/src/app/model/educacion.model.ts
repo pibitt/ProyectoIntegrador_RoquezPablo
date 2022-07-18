@@ -1,3 +1,7 @@
+// no sirve, de Andrés. Lo reemplace por el de Mati
+
+
+
 // export class educacion{
 //     id?: number; 
 //     descripcionEdu: string;

@@ -1,4 +1,4 @@
-//ARCHIVO DE ANDRES CAMACHO. Reemplaza educacion.model.ts de MGB
+// no sirve, de Andrés. Lo reemplace por el de Mati
 
 export interface Education{
     idEdu: number;
