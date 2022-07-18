@@ -1,7 +1,7 @@
 <div class="row">
     <h1>Skills</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevoskill" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">
             Agregar 'Skill'
         </button>
     </div>
@@ -14,6 +14,14 @@
     <div class="progress"   style="height: 30px;" >
         <div class="progress-bar" style="width: {{Skills.porcentajeS}}%" role="progressbar" > <h2>{{Skills.nombreS}} - {{Skills.porcentajeS}}%</h2></div>
       </div>
+      <td *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editskill/{{Skills.id}}">
+            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+    </td>
+    <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(Skills.id)">
+            <i class="bi bi-trash-fill"></i> BORRAR</button>
+    </td>
   
 
 </div>
@@ -27,7 +35,7 @@
             
             [percent]="95"
             [radius]="90"
-            [imageSrc]="'../assets/html.png'"
+            
             [showImage]="true"
             [imageHeight]="70"
             [imageWidth]="70"

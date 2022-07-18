@@ -63,7 +63,7 @@ public class CProyectos {
         ProyectosMati proyectos = new ProyectosMati(dtopro.getNombrePro(), dtopro.getDescripcionPro(), dtopro.getImagenPro());
         sProyectos.save(proyectos);
 
-        return new ResponseEntity(new Mensaje("Proyecto agregado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto agregado!"), HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")

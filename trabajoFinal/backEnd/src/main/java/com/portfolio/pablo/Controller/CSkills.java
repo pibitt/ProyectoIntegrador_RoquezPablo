@@ -51,13 +51,13 @@ public class CSkills {
         return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
     }
 
-    @PostMapping("/create")
+  @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoSkills dtoskills) {
         if (StringUtils.isBlank(dtoskills.getNombreS())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         if (sSkills.existsByNombreS(dtoskills.getNombreS())) {
-            return new ResponseEntity(new Mensaje("Skill existente"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Esa skill existe"), HttpStatus.BAD_REQUEST);
         }
 
         Skills skills = new Skills(dtoskills.getNombreS(), dtoskills.getPorcentajeS(), dtoskills.getImagenS());
@@ -65,7 +65,8 @@ public class CSkills {
 
         return new ResponseEntity(new Mensaje("Skill agregada"), HttpStatus.OK);
     }
-
+    
+    
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoSkills dtoskills) {
         //validamos ID
