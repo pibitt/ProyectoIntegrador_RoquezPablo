@@ -9,3 +9,20 @@ div{
 h2, h3{
     display: inline;
 }
+
+.edit-button{
+    border-radius: 100%;
+    background-color: green;
+    color: white;
+}
+.delete-button{
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+}
+.add-button{
+    border-radius: 100%;
+    background-color: white;
+    color: black;
+
+}

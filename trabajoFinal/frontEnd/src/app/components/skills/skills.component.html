@@ -5,9 +5,6 @@
             Agregar 'Skill'
         </button>
     </div>
-
-
-
 </div>
 
 <div class="row" *ngFor="let Skills of skill">   
@@ -21,11 +18,8 @@
     <td *ngIf="isLogged">
         <button class="btn btn-danger" (click)="delete(Skills.id)">
             <i class="bi bi-trash-fill"></i> BORRAR</button>
-    </td>
-  
-
+    </td>  
 </div>
-
 
 
 <div class="row" >
@@ -33,9 +27,9 @@
     <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let Skills of skill">{{Skills.nombreS}}
         <circle-progress
             
-            [percent]="95"
+            [percent]="50"
             [radius]="90"
-            
+                       
             [showImage]="true"
             [imageHeight]="70"
             [imageWidth]="70"
@@ -90,3 +84,5 @@
         </circle-progress>
     </div>
 </div> -->
+
+

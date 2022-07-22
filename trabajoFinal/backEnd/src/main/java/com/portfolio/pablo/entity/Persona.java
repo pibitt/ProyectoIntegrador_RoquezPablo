@@ -37,17 +37,28 @@ public class Persona {
 
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String descripcion;
+    
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String imgPortada;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idEdu")
-    private List<Educacion> educacionList;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<EducacionMati> educacionList;
 
-    //@OneToMany(fetch = FetchType.LAZY, mappedBy = "idSkill")
-   // private List<Skills> skillsList;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<Skills> skillsList;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
-    private List<Experiencia> experienciaList;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<ExperienciaMati> experienciaList;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<ProyectosMati> proyectosList;
 
+  
+    
+    
 }
 
-//no pongo el constructor ni los getters y setters porque la pagina no me levanta los datos :(
+
+
+
 

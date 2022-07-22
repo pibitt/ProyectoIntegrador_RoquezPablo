@@ -64,10 +64,6 @@ public class Experiencia {
 
     public void setImagenExp(String imagenExp) {
         this.imagenExp = imagenExp;
-    }
-
-   
-    
-    
+    }   
     
 }

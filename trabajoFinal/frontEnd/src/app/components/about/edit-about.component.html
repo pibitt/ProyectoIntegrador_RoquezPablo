@@ -1,0 +1,35 @@
+<div class="container" *ngIf="pers">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="pers.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="pers.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="img">Imagen</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="pers.img" required>
+                </div>
+                <div class="form-group">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" class="form-control" id="Apellido" name="Apellido" [(ngModel)]="pers.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="Titulo">Titulo</label>
+                    <input type="text" class="form-control" id="Titulo" name="Titulo" [(ngModel)]="pers.titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="img-portada">Descripción</label>
+                    <input type="text" class="form-control" id="img-portada" name="img-portada" [(ngModel)]="pers.imgPortada" required>
+                </div>
+                <button class="btn btn-primary">Actualizar educación</button>
+            </form>
+            <a href="http://localhost:4200/ "class="btn btn-primary">Cancelar</a>
+        </div>
+
+    </div>
+</div>

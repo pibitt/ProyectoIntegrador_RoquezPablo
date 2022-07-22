@@ -1,4 +1,16 @@
 img {
     width: 100%;
     height: 600px;
+    position: relative;
+    z-index: 0;
+}
+
+.boton-cambiar-imagen {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    z-index: 1;
+}
+.edit-button{
+    border-radius: 100%;
 }
