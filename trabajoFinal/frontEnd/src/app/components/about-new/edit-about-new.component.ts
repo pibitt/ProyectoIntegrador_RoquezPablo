@@ -30,7 +30,7 @@ export class EditAboutNewComponent implements OnInit {pers: PersonaNuevo = null;
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert ("Error al editar pers");
+        alert ("Error al editar la persona");
         this.router.navigate(['']);
       }
     )

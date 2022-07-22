@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { AboutComponent } from './components/about/about.component';
+
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -25,7 +25,7 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
 import { EditProyectoComponent } from './components/projects/edit-proyecto.component';
 import { EditSkillsComponent } from './components/skills/edit-skills.component';
 import { NewSkillsComponent } from './components/skills/new-skills.component';
-import { EditAboutComponent } from './components/about/edit-about.component';
+
 import { AboutNewComponent } from './components/about-new/about-new.component';
 import { EditAboutNewComponent } from './components/about-new/edit-about-new.component';
 
@@ -38,7 +38,7 @@ import { EditAboutNewComponent } from './components/about-new/edit-about-new.com
     HeaderComponent,
     LogoAPComponent,
     BannerComponent,
-    AboutComponent,
+
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
@@ -56,7 +56,7 @@ import { EditAboutNewComponent } from './components/about-new/edit-about-new.com
     EditProyectoComponent,
     EditSkillsComponent,
     NewSkillsComponent,
-    EditAboutComponent,
+
     AboutNewComponent,
     EditAboutNewComponent,    
   ],

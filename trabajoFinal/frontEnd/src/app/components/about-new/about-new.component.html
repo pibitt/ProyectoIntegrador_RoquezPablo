@@ -1,35 +1,29 @@
 <!-- Main -->
-<div class="row"  *ngFor="let persona of pers">
+<div class="row" *ngFor="let persona of pers">
     <div>
-        <img src={{persona.imgPortada}} alt="" class="img-portada" >
-        <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-imagen-portada">
-            <i class="bi bi-pencil-fill"></i> 
-        </button> -->        
-    </div>    
+        <img src={{persona.imgPortada}} alt="" class="img-portada">
+       
+    </div>
 
     <div class="col-12 col-sm-2">
-        <img src={{persona.imgP}} class="img-fluid" id="fotodeperfil">
-        <!-- <button type="button" class="btn btn-dark">
-            <i class="bi bi-pencil-fill"></i> 
-        </button> -->
-    </div>   
+        <img src={{persona.imgP}} class="img-fluid" id="fotodeperfil">        
+    </div>
 
     <div class="col-12 col-sm-2">
         <p id="nombre">{{persona.nombreP}} {{persona.apellidoP}}</p>
         <p>{{persona.tituloP}}</p>
-        <button type="button" class="btn btn-dark" routerLink="/editpersona/{{persona.id}}">
-            <i class="bi bi-pencil-fill"></i> 
-        </button>
-    </div>    
+        <td *ngIf="isLogged"> <button type="button" class="btn btn-dark" routerLink="/editpersona/{{persona.id}}">
+                <i class="bi bi-pencil-fill"></i>
+            </button></td>
+
+
+    </div>
 
     <div class="col-12 col-sm-8">
         <span>
             <h1>Acerca de mí</h1>
-            <p>{{persona.descP}}</p>            
-        </span>
-        <!-- <button type="button" class="btn btn-dark" >
-            <i class="bi bi-pencil-fill"></i> 
-        </button> -->
+            <p>{{persona.descP}}</p>
+        </span>        
     </div>
 
 </div>
