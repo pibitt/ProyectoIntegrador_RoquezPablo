@@ -34,7 +34,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
+
+
+//esto puede que este mal:
 @CrossOrigin
+//
+
 public class AuthController {
 
     @Autowired

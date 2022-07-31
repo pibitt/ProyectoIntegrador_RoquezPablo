@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("explab")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://pmrportfoliofront.web.app/")
 public class CExperiencia {
 
     @Autowired
@@ -60,7 +60,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         }
 
-        ExperienciaMati experiencia = new ExperienciaMati(dtoexp.getNombreE(), dtoexp.getDescripcionE());
+        ExperienciaMati experiencia = new ExperienciaMati(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getFechaE());
         sExperiencia.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -84,6 +84,7 @@ public class CExperiencia {
         ExperienciaMati experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreE(dtoexp.getNombreE());
         experiencia.setDescripcionE(dtoexp.getDescripcionE());
+        experiencia.setFechaE(dtoexp.getFechaE());
 
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia Actualizada"), HttpStatus.OK);

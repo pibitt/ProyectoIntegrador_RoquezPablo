@@ -1,22 +1,23 @@
 <div class="container">
     <div class="row">
-        <div>
+        <div class="col">
+            <h1>Agregar Educación</h1>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreEdu">Nombre de la Institución</label>
-                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
+                    <label for="nombreEdu" class="mb-2">Nombre de la Institución</label>
+                    <input type="text" class="form-control mb-2" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionEdu">Descripción</label>
-                    <input type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="descripcionEdu" required>
+                    <label for="descripcionEdu" class="mb-2">Descripción</label>
+                    <input type="text" class="form-control mb-2" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="descripcionEdu" required>
                 </div>
                 <div class="form-group">
-                    <label for="fechaEdu">Fecha </label>
-                    <input type="text" class="form-control" id="fechaEdu" name="fechaEdu" [(ngModel)]="fechaEdu" required>
+                    <label for="fechaEdu" class="mb-2">Fecha </label>
+                    <input type="text" class="form-control mb-2" id="fechaEdu" name="fechaEdu" [(ngModel)]="fechaEdu" required>
                 </div>
-                <button class="btn btn-primary">Agregar educación</button>
+                <button class="btn btn-primary mb-2">Agregar educación</button>
             </form>
-            <a href="http://localhost:4200/ "class="btn btn-primary">Cancelar</a>
+            <a href="https://pmrportfoliofront.web.app/" class="btn btn-secondary">Cancelar</a>
         </div>
 
     </div>

@@ -35,7 +35,7 @@ public class Persona {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String titulo;
 
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    @Size(min = 1, max = 350, message = "no cumple con la longitud")
     private String descripcion;
     
     @Size(min = 1, max = 50, message = "no cumple con la longitud")

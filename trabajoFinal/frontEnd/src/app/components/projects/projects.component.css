@@ -1,16 +1,135 @@
+.container-fluid{
+    padding-top: 4rem;
+    background-color: #F2EDDA;
+}
+
 .row {
     padding: 20px;
-    background-color: rgb(160, 160, 160);
+    position: relative;
 }
-.contenedor{
-    width:auto;
+
+
+h1, h2, h4, h5, p{
+    font-family: 'Albert Sans', sans-serif;
+}
+
+h1{
+    color: #3d3d3d
+}
+
+h2{
+    letter-spacing: 0.2rem;
+    color: #919191;
+    position: relative;
+    z-index: 1;
+}
+
+h2:before{
+    content: 'PROYECTOS';
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    color:rgba(59, 172, 182, 0.3);
+    font-size: 100px;
+    text-align: center;
+    top: -110%;
+    left: 10%;
+    right: 10%;
+    z-index: -1;
 
 }
-.parte1, .parte2 {
-    display: inline-block;
-    text-align: left;
+
+
+h6, h3{
+    font-family: 'Source Code Pro', monospace;
 }
-.img-proyecto{
-    box-shadow: 10px 10px 30px #000;
+
+h6{
+    color: white;
+    background-color: #3BACB6   
+}
+
+
+.img-proyectos{
+    max-width: 100%;
     
 }
+
+.edit-button, .delete-button{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px rgb(128, 128, 128);
+}
+
+.add-button{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px rgb(128, 128, 128);
+    padding: 5px;
+    align-items: center;
+    margin: 1rem auto;
+
+}
+
+.add-button i{
+    font-size: 25px;
+    text-align: center;
+    line-height: 32px;
+    margin: auto;
+}
+
+tr{
+    border-color: #3BACB6;   
+    border-style: solid;
+    border-width: 0;
+}
+
+.table > :not(caption) > * > * {
+    padding: 2rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+
+.modal-dialog {
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media(max-width: 840px){
+    h2:before{
+        font-size: 80px;
+        top: -100%;
+    }
+}
+
+@media(max-width: 660px){
+    h2:before{
+        font-size: 60px;
+        top: -80%;
+    }
+}
+
+
+@media(max-width: 576px){
+    h2:before{
+        font-size: 48px;
+        top: -41%;
+    }
+    td{
+        width: 100%;
+    }
+}
+
+@media(max-width: 430px){
+    h2:before{
+        font-size: 36px;
+    }
+
+}
+

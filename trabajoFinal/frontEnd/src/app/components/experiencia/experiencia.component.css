@@ -1,9 +1,130 @@
+.container-fluid{
+
+    padding-top: 1rem;
+}
+
 .row {
     padding: 20px;
+    position: relative;
+
 }
-div{
-    background-color: aqua;
+
+h1, h2, h4, h5, p{
+    font-family: 'Albert Sans', sans-serif;
 }
-h2, h3{
-    display: inline;
+
+h1{
+    color: #3d3d3d
+}
+
+h2{
+    letter-spacing: 0.2rem;
+    color: #919191;
+    position: relative;
+}
+
+h2:before{
+    content: '';
+    position: absolute;
+    border-top: solid #3BACB6 2px;
+    height: 1em;
+    top: 50%;
+    left: -15rem;
+    width: 36%;
+}
+h6, h3{
+    font-family: 'Source Code Pro', monospace;
+}
+
+h3{
+    color: #2F8F9D;
+    font-weight: bold;
+}
+h6{
+    color: white;
+    background-color: #3BACB6   
+}
+
+
+.add-experiencia{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px rgb(128, 128, 128);
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    padding: 5px;
+    align-items: center;
+}
+
+.add-experiencia i{
+    font-size: 25px;
+    text-align: center;
+    line-height: 32px;
+    margin: auto;
+}
+
+.edit-button, .delete-button{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px rgb(128, 128, 128);
+
+}
+
+tr{
+    border-color: #3BACB6;   
+    border-style: solid;
+    border-width: 0;
+}
+
+.table > :not(caption) > * > * {
+    padding: 2rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.fecha-exp{
+    color: white;
+    background-color: #3BACB6;
+    padding: 3px 10px;  
+    display: inline-block; 
+    font-family: Source Code Pro,monospace;
+}
+
+@media(max-width: 1100px){
+    h3{
+        font-size: 1.25rem;
+    }
+
+}
+
+@media(max-width: 680px){
+    .add-experiencia{       
+        top: 7rem;
+        right: 45%;
+        left: 45%;      
+    }
+
+    .experiencias{
+        margin-top: 3rem;
+    }
+}
+
+@media(max-width: 538px){
+    .add-experiencia{       
+        top: 11rem;     
+    }
+
+    .experiencias{
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 450px){
+    .add-experiencia{       
+        top: 13rem;     
+    }
+
 }

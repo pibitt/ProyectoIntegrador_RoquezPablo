@@ -1,10 +1,13 @@
 
 package com.portfolio.pablo.entity;
 
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class PersonaNuevo {
@@ -85,6 +88,19 @@ public class PersonaNuevo {
     public void setDescP(String descP) {
         this.descP = descP;
     }
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<EducacionMati> educacionList;
+    
+     @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<Skills> skillsList;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<ExperienciaMati> experienciaList;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    private List<ProyectosMati> proyectosList;
+
     
     
     

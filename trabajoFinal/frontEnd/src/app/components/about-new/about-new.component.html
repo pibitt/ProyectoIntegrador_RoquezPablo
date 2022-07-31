@@ -1,29 +1,32 @@
 <!-- Main -->
-<div class="row" *ngFor="let persona of pers">
-    <div>
-        <img src={{persona.imgPortada}} alt="" class="img-portada">
-       
+
+<div class="container-fluid" *ngFor="let persona of pers">
+    <div class="row">
+        <div div class="col-12 p-0">
+            <img src={{persona.imgPortada}} alt="" class="img-portada">       
+        </div>
+    </div>  
+
+    <div class="row" >
+        <div class="col-md-4 px-5 py-4 text-center">
+            <img src={{persona.imgP}} class="img-fluid img-perfil" id="fotodeperfil">     
+            <h1 class="fw-bold mt-3" id="nombre">{{persona.nombreP}} {{persona.apellidoP}}</h1>
+            <h6>{{persona.tituloP}}</h6>  
+        </div>
+
+        <div class="col-md-7 p-5">
+                <h3 class="fw-bold">Acerca de mí</h3>
+                <p>{{persona.descP}}</p>       
+        </div>
     </div>
-
-    <div class="col-12 col-sm-2">
-        <img src={{persona.imgP}} class="img-fluid" id="fotodeperfil">        
-    </div>
-
-    <div class="col-12 col-sm-2">
-        <p id="nombre">{{persona.nombreP}} {{persona.apellidoP}}</p>
-        <p>{{persona.tituloP}}</p>
-        <td *ngIf="isLogged"> <button type="button" class="btn btn-dark" routerLink="/editpersona/{{persona.id}}">
-                <i class="bi bi-pencil-fill"></i>
-            </button></td>
-
-
-    </div>
-
-    <div class="col-12 col-sm-8">
-        <span>
-            <h1>Acerca de mí</h1>
-            <p>{{persona.descP}}</p>
-        </span>        
+    <div class="row">
+        <div class="col-12">
+            <div class="edit-persona-btn text-end" *ngIf="isLogged"> 
+                <button type="button" class="btn btn-dark" routerLink="/editpersona/{{persona.id}}">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+            </div> 
+        </div>
     </div>
 
 </div>

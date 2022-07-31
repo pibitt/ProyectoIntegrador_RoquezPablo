@@ -1,22 +1,23 @@
 <div class="container">
     <div class="row">
         <div>
+            <h1>Agregar Proyecto</h1>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombrePro">Nombre del proyecto</label>
-                    <input type="text" class="form-control" id="nombrePro" name="nombrePro" [(ngModel)]="nombrePro" required>
+                    <label for="nombrePro" class="mb-2">Nombre del proyecto</label>
+                    <input type="text" class="form-control mb-2" id="nombrePro" name="nombrePro" [(ngModel)]="nombrePro" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionPro">Descripción del proyecto</label>
-                    <input type="text" class="form-control" id="descripcionPro" name="descripcionPro" [(ngModel)]="descripcionPro" required>
+                    <label for="descripcionPro" class="mb-2">Descripción del proyecto</label>
+                    <input type="text" class="form-control mb-2" id="descripcionPro" name="descripcionPro" [(ngModel)]="descripcionPro" required>
                 </div>
                 <div class="form-group">
-                    <label for="imagenPro">Imagen </label>
-                    <input type="text" class="form-control" id="imagenPro" name="imagenPro" [(ngModel)]="imagenPro" required>
+                    <label for="imagenPro" class="mb-2">Imagen </label>
+                    <input type="text" class="form-control mb-2" id="imagenPro" name="imagenPro" [(ngModel)]="imagenPro" required>
                 </div>
-                <button class="btn btn-primary">Agregar Proyecto</button>
+                <button class="btn btn-primary mb-2">Agregar Proyecto</button>
             </form>
-            <a href="http://localhost:4200/ "class="btn btn-primary">Cancelar</a>
+            <a href="https://pmrportfoliofront.web.app/" class="btn btn-secondary">Cancelar</a>
         </div>
 
     </div>

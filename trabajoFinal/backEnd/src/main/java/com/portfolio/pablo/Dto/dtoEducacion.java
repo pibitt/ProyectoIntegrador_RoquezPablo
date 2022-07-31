@@ -18,6 +18,10 @@ public class dtoEducacion {
         this.descripcionEdu = descripcionEdu;
         this.fechaEdu = fechaEdu;
     }
+
+    public dtoEducacion() {
+    }
+    
     
     // G & S
 

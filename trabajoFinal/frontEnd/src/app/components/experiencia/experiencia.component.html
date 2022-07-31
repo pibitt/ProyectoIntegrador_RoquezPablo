@@ -1,63 +1,36 @@
-<!-- <div class="row">
-    <h1>Experiencia laboral</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-info" routerLink="/nuevaexp" *ngIf="isLogged">
-            Nueva Experiencia
-        </button>
-    </div>
-    <div class="col lg 1 ">
-        <div class="col-lg-11">
-            <table class="table">
-                <tbody>
-                    <tr *ngFor="let Experiencia of expe">
-                        <td>
-                            <h4>{{Experiencia.nombreE}}</h4>
-                        </td>
-                        <td>{{Experiencia.descripcionE}}</td>
-                        <td *ngIf="isLogged">
-                            <button class="btn btn-success" routerLink="/editexp/{{Experiencia.id}}"><i
-                                    class="bi bi-pen"></i>Editar</button>
-                        </td>
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-lg-10 offset-lg-1 align-items-center text-center text-md-start">
+            <img src="https://i.postimg.cc/8CV6zKK4/lista-de-verificacion.gif" alt="experiencia laboral" height="auto" width="80" class="text-center text-md-start" style="max-width: 80px;"/>
+            <h2 class="fw-bold text-uppercase my-4 text-center text-md-start d-inline-block">
+             Experiencia laboral
+            </h2>  
+        </div>
+      
+        <div class="col-2 text-end">
+            <button type="button" class="btn btn-dark add-experiencia" routerLink="/nuevaexp" *ngIf="isLogged">
+                <i class="bi bi-plus-lg"></i>
+            </button>
+        </div>
 
-                        <td *ngIf="isLogged">
-                            <button class="btn btn-danger" (click)="delete(Experiencia.id)"><i
-                                    class="bi bi-x"></i>Borrar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-lg-10 offset-lg-1 experiencias">
+            <div class="container">
+                <div class="row" *ngFor="let Experiencia of expe">
+                    <div class="col-md-3 col-sm-12">
+                        <h3>{{Experiencia.nombreE}}</h3>
+                    </div>
+                    <div class="col-md-7 col-sm-10">
+                        <p class="fecha-exp">{{Experiencia.fechaE}}</p>
+                        <p>{{Experiencia.descripcionE}}</p>
+                    </div>                                          
+                    <div class="col-md-2 col-sm-2 text-end" *ngIf="isLogged">
+                        <button class="btn btn-light edit-button m-1" routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-fill"></i></button>
+                        <button class="btn btn-danger delete-button m-1" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash-fill"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div> -->
-
-<div class="row">
-    <h1>Experiencia laboral</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
-            Nueva Experiencia
-        </button>
-    </div>
-
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Experiencia of expe">
-                    <td>
-                        <h2>{{Experiencia.nombreE}}</h2>
-                    </td>
-                    <td>{{Experiencia.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light edit-button" routerLink="/editexp/{{Experiencia.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
 </div>

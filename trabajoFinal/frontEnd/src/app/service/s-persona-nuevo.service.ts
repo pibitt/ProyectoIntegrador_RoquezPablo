@@ -7,7 +7,7 @@ import { PersonaNuevo } from '../model/persona-nuevo';
   providedIn: 'root'
 })
 export class SPersonaNuevoService {
-  expURL = 'http://localhost:8080/personaNuevo/';
+  expURL = 'https://portfoliopmr.herokuapp.com/personaNuevo/';
 
   constructor(private httpClient: HttpClient) { }
 

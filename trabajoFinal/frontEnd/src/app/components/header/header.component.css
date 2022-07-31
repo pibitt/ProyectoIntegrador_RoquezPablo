@@ -1,6 +1,14 @@
 div{
-    background-color: #5096e0;
-    }
+    background-color: #2F8F9D;
+}
+
+.container-fluid{
+    position: fixed;
+    top: 0;
+    z-index: 4;
+
+}
+
 app-social{
     float:right;
     margin-top: 25px;

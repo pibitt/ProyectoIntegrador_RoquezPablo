@@ -2,31 +2,39 @@
     width: 150px;
 }
 img{
-    width: 25px;
-    margin:auto 0.2em auto 0.2em;
+    width: 35px;
+    margin:auto 0.5em auto 0.5em;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
 button {
     margin-left: 0.3em;
     margin-right: 0.6em;
     border-width: 1.5px;
+    border-radius: 5rem;
+    font-family: 'Albert Sans', sans-serif;
+    line-height: 1;
 }
 
-@media(max-width: 575px){
+@media(max-width: 576px){
+    .container-fluid{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
     .container {
-        flex-direction: column;
+        padding: 0px;
     }
     
     .redes {
         display: flex;
-        flex-direction: column;
+
         align-items: center;
     }
     

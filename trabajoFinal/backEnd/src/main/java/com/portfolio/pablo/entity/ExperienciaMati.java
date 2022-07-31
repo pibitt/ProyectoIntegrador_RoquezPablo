@@ -12,18 +12,18 @@ public class ExperienciaMati {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String fechaE;
     
     //constructores
 
     public ExperienciaMati() {
     }
 
-    public ExperienciaMati(String nombreE, String descripcionE) {
+    public ExperienciaMati(String nombreE, String descripcionE, String fechaE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.fechaE = fechaE;
     }
-
-   //getters and Setters
 
     public int getId() {
         return id;
@@ -48,8 +48,14 @@ public class ExperienciaMati {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
-    
+
+    public String getFechaE() {
+        return fechaE;
+    }
+
+    public void setFechaE(String fechaE) {
+        this.fechaE = fechaE;
+    }
+
     
 }
